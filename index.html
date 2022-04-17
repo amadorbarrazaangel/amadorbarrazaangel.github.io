@@ -1,2 +1,68 @@
-<p>hola</P>
-<a  href="diseño_1°.html">owo</a>
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+        
+        <title>APP MOVIl</title>
+        
+        
+        <meta charset="UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+     
+          <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="estilos.css">
+  
+
+    </head>
+    
+    <body>
+        
+   <a  href="diseño_1°.html">owo</a>
+
+ 
+   					
+      <div class="container" id="formulario">
+      	
+        	<form action="validar_inicio_sesion.php" method="post"> 
+          <div class="form-group">
+                <label for="nickname">Nickname</label>
+                <input type="text" class="form-control" placeholder="Nombre de usuario" name="usuario" required align="center">
+            </div>
+
+            <div class="form-group">
+                <label for="ContraseÃ±a">ContraseÃ±a</label>
+                <input type="password" class="form-control" placeholder="ContraseÃ±a" name="contraseÃ±a" required align="center">
+            </div>
+
+              <div class="clearfix"></div>
+            <input type="submit" value="Iniciar sesion" class="btn btn-primary">
+
+       <?php
+
+    $servidor = "localhost"; $usuario = "root"; $contrasena = ""; $bd = "base_del_foro";
+	$conexion = new mysqli($servidor, $usuario, $contrasena, $bd);
+
+    if($conexion->connect_error){ echo "Error al conectar a la Base de datos"; }
+
+    
+
+
+
+      ?>
+
+        </form>
+      </div>
+
+
+
+
+    <script src="js/jquery.min.js"></script>
+	<script src="js/util.js"></script>
+	<script src="js/bootstrap.js"></script>
+
+    </body>
+    
+</html>
